@@ -3,21 +3,21 @@ import "../assets/Home.css";
 
 const featuresData = [
   {
-    imgSrc: "/assets/images/featured1.jpg",
+    imgSrc: "/assets/images/featured/featured1.jpg",
     title: "Blah Blah Blah",
     description:
       "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
     link: "/productdetails",
   },
   {
-    imgSrc: "/assets/images/featured2.jpg",
+    imgSrc: "/assets/images/featured/featured2.jpg",
     title: "Blah Blah Blah",
     description:
       "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
     link: "/productdetails",
   },
   {
-    imgSrc: "/assets/images/featured3.jpg",
+    imgSrc: "/assets/images/featured/featured3.jpg",
     title: "Blah Blah Blah",
     description:
       "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
