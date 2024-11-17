@@ -1,31 +1,12 @@
 import React from "react";
 import "../assets/Home.css";
-
-const featuresData = [
-  {
-    imgSrc: "/assets/images/featured/featured1.jpg",
-    title: "Blah Blah Blah",
-    description:
-      "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    link: "/productdetails",
-  },
-  {
-    imgSrc: "/assets/images/featured/featured2.jpg",
-    title: "Blah Blah Blah",
-    description:
-      "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    link: "/productdetails",
-  },
-  {
-    imgSrc: "/assets/images/featured/featured3.jpg",
-    title: "Blah Blah Blah",
-    description:
-      "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah",
-    link: "/productdetails",
-  },
-];
+import { Link } from "react-router-dom";
+import { useProducts } from "../context/ProductsContext";
 
 const Home = () => {
+  const { products } = useProducts();
+  const featuredProducts = products.filter((product) => product.featured);
+
   return (
     <>
       <section className="banner">
@@ -34,26 +15,30 @@ const Home = () => {
             Blahh Bla <span> BlahBlah </span> Blah Blah Blah
           </h3>
           <p>
-            This website is designed by blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+            This website is designed by blah blah blah blah blah blah blah blah
+            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            blah blah blah blah blah blah blah blah.
           </p>
-          <a href="/allproducts" className="btn">SHOP NOW</a>
+          <a href="/categories" className="btn">
+            SHOP NOW
+          </a>
         </div>
       </section>
 
       <section className="features">
         <h3 className="heading">
-          <span> Featured </span> Products
+          Featured Products
         </h3>
 
         <div className="box-container">
-          {featuresData.map((feature, index) => (
-            <div className="box" key={index}>
-              <img src={feature.imgSrc} alt={feature.title} />
-              <h4>{feature.title}</h4>
-              <p>{feature.description}</p>
-              <a href={feature.link} className="btn">
+          {featuredProducts.map((product) => (
+            <div className="box" key={product.id}>
+              <img src={product.image} alt={product.name} />
+              <h4>{product.name}</h4>
+              <p>{product.description}</p>
+              <Link to={`/product/${product.id}`} className="btn">
                 Read More
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -61,9 +46,12 @@ const Home = () => {
 
       <section className="additional-content">
         <div className="content">
-          <h3>BLAH BLAH BLAH</h3>
+          <h3>BLAH BLAH BLAH </h3>
           <p>
-            This website is designed by blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.
+            This website is designed by blah blah blah blah blah blah blah blah
+            blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+            blah blah blah blah blah blah blah blah blah blah blah blah.
           </p>
         </div>
       </section>
