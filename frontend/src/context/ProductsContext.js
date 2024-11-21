@@ -31,7 +31,7 @@ export const ProductsProvider = ({ children }) => {
     {
       id: 3,
       name: 'Areté Blue Butterfly Pea Tea',
-      description: 'Boosts Metabolism & Hair Growth',
+      description: 'Boosts Metabolism & Hair Growth Boosts Metabolism & Hair Growth Boosts Metabolism & Hair Growth Boosts Metabolism & Hair Growth Boosts Metabolism & Hair Growth Boosts Metabolism & Hair Growth Boosts Metabolism & Hair Growth',
       price: 999,
       brand: 'ARETÉ',
       category: 'Tea',
@@ -173,7 +173,6 @@ export const ProductsProvider = ({ children }) => {
     },
   ]);
   
-
   return (
     <ProductsContext.Provider value={{ products, setProducts }}>
       {children}

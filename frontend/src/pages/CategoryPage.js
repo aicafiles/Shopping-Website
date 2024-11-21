@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-// Sample category data (you can pull this from an API or a data file)
 const categoryData = {
   "hair-care": {
     name: "Hair Care",
@@ -25,8 +24,8 @@ const categoryData = {
 };
 
 const CategoryPage = () => {
-  const { categoryName } = useParams(); // Get the category name from the URL
-  const category = categoryData[categoryName]; // Get the data for this category
+  const { categoryName } = useParams();
+  const category = categoryData[categoryName]; 
 
   if (!category) {
     return <p>Category not found.</p>;

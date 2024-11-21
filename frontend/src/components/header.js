@@ -21,7 +21,9 @@ function Header() {
         <div className="icons">
           <div className="fa fa-user" id="login-btn"></div>
           <div className="fa fa-heart" id="wishlist-btn"></div>
-          <div className="fa fa-shopping-cart" id="cart-btn"></div>
+          <Link to="/cart">
+            <div className="fa fa-shopping-cart" id="cart-btn"></div>
+          </Link>
         </div>
       </header>
 
